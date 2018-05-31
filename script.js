@@ -127,7 +127,7 @@ function Oplay() {
 	function Orandomplay() {
 		for (var i = 0; i < 10; i++) {
 		// Loop to find a valid play
-		
+
 			var randomNumber = Math.floor((Math.random() * 9) + 1);
 			var randomSquare = $('#square'+randomNumber);
 			validatePlay(randomSquare);
@@ -139,7 +139,7 @@ function Oplay() {
 				randomSquare.addClass('O-play');
 				randomSquare.html("O");
 				break;
-			} 
+			}
 		}
 	}
 
@@ -175,8 +175,8 @@ function Oplay() {
 	win159_sq1 = ( sq5.hasClass('X-play') && sq9.hasClass('X-play') || sq5.hasClass('O-play') && sq9.hasClass('O-play') ) && !(sq1.hasClass('played'))
 
 	win573_sq3 = ( sq5.hasClass('X-play') && sq7.hasClass('X-play') || sq5.hasClass('O-play') && sq7.hasClass('O-play') ) && !(sq3.hasClass('played'))
-	win573_sq5 = ( sq5.hasClass('X-play') && sq3.hasClass('X-play') || sq5.hasClass('O-play') && sq3.hasClass('O-play') ) && !(sq5.hasClass('played'))
-	win573_sq7 = ( sq7.hasClass('X-play') && sq3.hasClass('X-play') || sq7.hasClass('O-play') && sq3.hasClass('O-play') ) && !(sq7.hasClass('played'))
+	win573_sq5 = ( sq7.hasClass('X-play') && sq3.hasClass('X-play') || sq7.hasClass('O-play') && sq3.hasClass('O-play') ) && !(sq5.hasClass('played'))
+	win573_sq7 = ( sq5.hasClass('X-play') && sq3.hasClass('X-play') || sq5.hasClass('O-play') && sq3.hasClass('O-play') ) && !(sq7.hasClass('played'))
 
 
 
@@ -187,8 +187,8 @@ function Oplay() {
 		Oplaying(sq2)
 	} else if ( win123_sq1 )  {
 		Oplaying(sq1)
-	} 
-	
+	}
+
 	// Win 4 5 6
 	else if ( win456_sq6 ) {
 		Oplaying(sq6)
@@ -196,9 +196,9 @@ function Oplay() {
 		Oplaying(sq5)
 	} else if ( win456_sq4 ) {
 		Oplaying(sq4)
-	} 
+	}
 
-	// Win 7 8 9 
+	// Win 7 8 9
 	else if ( win789_sq9 ) {
 		Oplaying(sq9)
 	} else if ( win789_sq8 ) {
@@ -223,7 +223,7 @@ function Oplay() {
 		Oplaying(sq2)
 	} else if ( win528_sq5 ) {
 		Oplaying(sq5)
-	} 
+	}
 
 	// Win 6 9 3
 	else if ( win693_sq3 ) {
@@ -241,7 +241,7 @@ function Oplay() {
 		Oplaying(sq5)
 	} else if ( win159_sq1 ) {
 		Oplaying(sq1)
-	} 
+	}
 
 	// Win 5 7 3
 	else if ( win573_sq3 ) {
@@ -250,7 +250,7 @@ function Oplay() {
 		Oplaying(sq7)
 	} else if ( win573_sq5 ) {
 		Oplaying(sq5)
-	} 
+	}
 
 
 	else {
@@ -281,7 +281,7 @@ $('.tile').on('click', function Xplay() {
 	} else {
 		alert("That square has already been played. Please choose another square");
 	}
-	
+
 })
 
 $('#reset-button').on('click', function() {
